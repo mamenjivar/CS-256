@@ -1,7 +1,8 @@
 Cal Poly Pomona
 
 Course: CS 256
-Due Date: 4/11/18
+
+Due Date: 4/12/18
 
 Assignment: HW #2
 
