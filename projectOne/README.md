@@ -1,10 +1,15 @@
- Volume in drive C has no label.
- Volume Serial Number is 0CB2-A213
+Cal Poly Pomona
 
- Directory of C:\Users\User\Documents\GitHub\CS-256\projectOne
+Course: CS 256
 
-04/18/2018  04:48 PM    <DIR>          .
-04/18/2018  04:48 PM    <DIR>          ..
-04/18/2018  04:49 PM                 0 README.md
-               1 File(s)              0 bytes
-               2 Dir(s)  554,051,522,560 bytes free
+Assignment: Project #1
+
+Programming in C
+
+DUE: TUESDAY 4/24
+
+1.	Theater Seating (Chapter 7 pg454 #20)
+Complete the assignment individually but as always you may brain storm and talk with your peers using the discussion board on blackboard.
+
+What to Submit:
+At the top of your submitted file include the URL to your repository. Specifically, the Theater Seating program. Additionally, include a printout of your code. Finally, the file should be saved as either a DOC or PDF.
