@@ -1,5 +1,5 @@
 /*
- * GeometryCalculator.c
+ * ReverseArray.c
  * Course: CS 256
  * Assignment: HW #3.4
  * Description: Chapter 9 Programming Challenge #10 p 546
