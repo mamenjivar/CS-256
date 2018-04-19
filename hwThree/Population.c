@@ -1,5 +1,5 @@
 /*
- * GeometryCalculator.c
+ * Population.c
  * Course: CS 256
  * Assignment: HW #3.2
  * Population
