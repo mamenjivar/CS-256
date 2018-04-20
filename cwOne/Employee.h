@@ -12,6 +12,8 @@
 */
 #ifndef EMPLOYEE_H
 #define RECTANGLE_H
+ 
+// this allows me to use string objects
 #include <string>
 
 using namespace std;
@@ -19,10 +21,13 @@ using namespace std;
 // Employee class declaration
 class Employee {
 public:
+	// setters or accessors
 	void setName(string);
 	void setIdNumber(int);
 	void setDepartment(string);
 	void setPosition(string);
+
+	// getters or mutators
 	string getName() const;
 	int getIdNumber() const;
 	string getDepartment() const;
