@@ -11,7 +11,7 @@
 * Write an employee class
 */
 #ifndef EMPLOYEE_H
-#define RECTANGLE_H
+#define EMPLOYEE_H
  
 // this allows me to use string objects
 #include <string>
