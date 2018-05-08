@@ -22,20 +22,24 @@ private:
 	string carMake;
 	string carModel;
 	string carLicenseNumber;
-	string carNumberofMinutesParked;
+	int carNumberMinutesParked;
+
 public:
+	ParkedCar();
 	// setters
 	void setCarMake(string);
 	void setCarModel(string);
 	void setCarLicenseNumber(string);
-	void setCarNumberOfMinutesParked(string);
+	void setCarNumberMinutesParked(int);
 
 	// getters
 	string getCarMake() const;
 	string getCarModel() const;
 	string getLicenseNumber() const;
-	string getCarNumberOfMinutesParked() const;
+	int getCarNumberMinutesParked() const;
+
+	void printCar();
+
 
 };
-
 #endif

@@ -11,3 +11,11 @@
 */
 #include "stdafx.h"
 #include "ParkingMeter.h"
+
+void ParkingMeter::setNumberParkingTimePurchased(int number) {
+	numberParkingTimePurchased = number;
+}
+
+int ParkingMeter::getNumberParkingTimePurchased() const {
+	return numberParkingTimePurchased;
+}

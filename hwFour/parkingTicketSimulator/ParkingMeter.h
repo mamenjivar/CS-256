@@ -12,12 +12,18 @@
 #pragma once
 #ifndef PARKINGMETER_H
 #define PARKINGMETER_H
+#include <string>
+
+using namespace std;
 
 class ParkingMeter {
 private:
+	int numberParkingTimePurchased;
 
 public:
+	void setNumberParkingTimePurchased(int);
 
+	int getNumberParkingTimePurchased() const;
 };
 
 #endif

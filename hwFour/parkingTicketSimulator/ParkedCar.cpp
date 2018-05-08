@@ -11,6 +11,17 @@
 */
 #include "stdafx.h"
 #include "ParkedCar.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+ParkedCar::ParkedCar() {
+	carMake = "";
+	carModel = "";
+	carLicenseNumber = "";
+	carNumberMinutesParked = 0;
+}
 
 void ParkedCar::setCarMake(string make) {
 	carMake = make;
@@ -24,8 +35,8 @@ void ParkedCar::setCarLicenseNumber(string licenseNumber) {
 	carLicenseNumber = licenseNumber;
 }
 
-void ParkedCar::setCarNumberOfMinutesParked(string numberOfMinutesParked) {
-	carNumberofMinutesParked = numberOfMinutesParked;
+void ParkedCar::setCarNumberMinutesParked(int numberOfMinutesParked) {
+	carNumberMinutesParked = numberOfMinutesParked;
 }
 
 string ParkedCar::getCarMake() const{
@@ -40,6 +51,13 @@ string ParkedCar::getLicenseNumber() const {
 	return carLicenseNumber;
 }
 
-string ParkedCar::getCarNumberOfMinutesParked() const {
-	return carNumberofMinutesParked;
+int ParkedCar::getCarNumberMinutesParked() const {
+	return carNumberMinutesParked;
+}
+
+void ParkedCar::printCar() {
+	cout << "Car Make: " << carMake << endl;
+	cout << "Car Model: " << carModel << endl;
+	cout << "Car License Number: " << carLicenseNumber << endl;
+	cout << "Car Minutes Parked: " << carNumberMinutesParked << endl;
 }
