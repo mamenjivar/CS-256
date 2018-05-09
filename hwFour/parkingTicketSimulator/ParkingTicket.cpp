@@ -7,7 +7,7 @@
 * Parking Ticket Simulator
 *
 * Description:
-* Simulation of an officer issuing a parking ticket
+* Issues Parking Ticket
 */
 #include "stdafx.h"
 #include "ParkingTicket.h"
@@ -40,14 +40,12 @@ void ParkingTicket::setTicketLicenseNumber(string number) {
 //	ticketAmount = amount;
 //}
 
-void ParkingTicket::ticket(int hour) {
-	if (hour == 1) {
-		ticketAmount = 25;
-	}
-	else {
-		hour--;
-		ticketAmount = 25 + (hour * 10);
-	}
+void ParkingTicket::ticket(int carMinutes, int meterMinutes) {
+	int total = carMinutes - meterMinutes;
+
+	ticketAmount = 45;
+
+	ticketAmount += (total % 15) * 10;
 }
 
 void ParkingTicket::setTicketName(string name) {
@@ -90,5 +88,6 @@ void ParkingTicket::printTicket() {
 	cout << "Model: " << ticketModel << endl;
 	cout << "Lisence Number: " << ticketLicenseNumber << endl;
 	cout << "Citation Amount: " << ticketAmount << endl;
+	cout << endl;
 
 }

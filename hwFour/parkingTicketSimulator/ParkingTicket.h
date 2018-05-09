@@ -7,7 +7,7 @@
 * Parking Ticket Simulator
 *
 * Description:
-* Simulation of an officer issuing a parking ticket
+* Issues Parking Ticket
 */
 #pragma once
 #ifndef PARKINGTICKET_H
@@ -33,7 +33,7 @@ public:
 	void setTicketModel(string);
 	void setTicketLicenseNumber(string);
 	//void setTicketAmount(int);
-	void ticket(int);
+	void ticket(int, int);
 	void setTicketName(string);
 	void setTicketBadgeNumber(int);
 

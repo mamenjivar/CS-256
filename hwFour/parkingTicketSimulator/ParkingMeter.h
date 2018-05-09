@@ -7,7 +7,7 @@
 * Parking Ticket Simulator
 *
 * Description:
-* Simulation of an officer issuing a parking ticket
+* Simulates the Parking Meter
 */
 #pragma once
 #ifndef PARKINGMETER_H
@@ -24,6 +24,8 @@ public:
 	void setNumberParkingTimePurchased(int);
 
 	int getNumberParkingTimePurchased() const;
+
+	void printMeter();
 };
 
 #endif

@@ -7,7 +7,7 @@
 * Parking Ticket Simulator
 *
 * Description:
-* Simulation of an officer issuing a parking ticket
+* Simulation of a parked vehicle
 */
 #pragma once
 #ifndef PARKEDCAR_H

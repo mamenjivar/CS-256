@@ -7,10 +7,14 @@
 * Parking Ticket Simulator
 *
 * Description:
-* Simulation of an officer issuing a parking ticket
+* Represents the parking meter
 */
 #include "stdafx.h"
 #include "ParkingMeter.h"
+#include <string>
+#include <iostream>
+
+using namespace std;
 
 void ParkingMeter::setNumberParkingTimePurchased(int number) {
 	numberParkingTimePurchased = number;
@@ -18,4 +22,8 @@ void ParkingMeter::setNumberParkingTimePurchased(int number) {
 
 int ParkingMeter::getNumberParkingTimePurchased() const {
 	return numberParkingTimePurchased;
+}
+
+void ParkingMeter::printMeter() {
+	cout << "Meter: " << numberParkingTimePurchased << " minute(s)" << endl;
 }

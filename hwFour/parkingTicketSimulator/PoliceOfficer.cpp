@@ -7,10 +7,11 @@
 * Parking Ticket Simulator
 *
 * Description:
-* Simulation of an officer issuing a parking ticket
+* Simulates Police Officer
 */
 #include "stdafx.h"
 #include "PoliceOfficer.h"
+#include "ParkingMeter.h"
 #include "ParkingTicket.h"
 #include <string>
 #include <iostream>
@@ -18,12 +19,12 @@
 using namespace std;
 
 // fix this
-void PoliceOfficer::patrol(int car, int meter) {
+bool PoliceOfficer::patrol(int car, int meter) {
 	if (car < meter) {
-		cout << "car is less than meter" << endl;
+		return false; // not cited
 	}
 	else {
-		cout << "car is greater than meter" << endl;
+		return true; // cited
 	}
 }
 
@@ -44,8 +45,10 @@ int PoliceOfficer::getOfficerBadgeNumber() const {
 }
 
 // issue a parking ticket
-void PoliceOfficer::citation(ParkedCar car) {
+void PoliceOfficer::citation(ParkedCar car, ParkingMeter meter) {
 	ParkingTicket citation;
+
+	citation.ticket(car.getCarNumberMinutesParked(), meter.getNumberParkingTimePurchased());
 
 	citation.setTicketName(officerName);
 	citation.setTicketBadgeNumber(officerBadgeNumber);

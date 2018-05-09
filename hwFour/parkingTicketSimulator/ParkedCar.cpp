@@ -7,7 +7,7 @@
 * Parking Ticket Simulator
 *
 * Description:
-* Simulation of an officer issuing a parking ticket
+* Simulates a Parked Vehicle
 */
 #include "stdafx.h"
 #include "ParkedCar.h"
