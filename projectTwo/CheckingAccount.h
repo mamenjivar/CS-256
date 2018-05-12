@@ -16,7 +16,7 @@ class CheckingAccount : public BankAccount {
 private:
 
 public:
-	void withdraw();
+	void withdraw(double);
 	void monthlyProc();
 };
 

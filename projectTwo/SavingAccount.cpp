@@ -12,14 +12,37 @@
 #include "stdafx.h"
 #include "SavingAccount.h"
 
+// if balance of savings account falls below 25, it becomes inactive
+// no more withdrawals may be made until balance is raised above 25
+// then account becomes active again
 bool SavingAccount::withdraw() {
-	return true;
+	if (getBalance() <= 25) {
+		status = false;
+	}
+	else {
+		status = true;
+		// call base class version of withdraw
+	}
+
+	return status;
 }
 
+// checks to see account is inactive before a deposit is made
+// if account is inactive, and deposit brings balance above $25,
+// account becomes active, then calls base class version of function
 bool SavingAccount::deposit() {
 	return true;
 }
 
+// checks number of withdrawals, if number of withdrawals for month is 
+// more than 4, service charge of $1 for each withdrawal above 4 is added
+// to base class variable for monthly service charges
+// also check if account active or inactive
 void SavingAccount::monthlyProc() {
+	if (getNumWithdrawals() > 4) {
+		serviceCharge(1.0);
+		SavingAccount::withdraw();
+		//BankAccount::withdraw();
 
+	}
 }

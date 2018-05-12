@@ -48,10 +48,35 @@ void BankAccount::withdraw(double num1) {
 // also adding the interest to the balance
 void BankAccount::calcInt() {
 	double mir; // monthly interest rate
+	double mi; // monthly interest
+
 	mir = annualInterestRate / 12;
+	mi = balance * mir;
+	balance += mi;
+
 
 }
 
+// subtracts monthly service charges from the balance
+// calls the calcInt function
+// sets withdrawals, deposits, and service charges to zero
 void BankAccount::monthlyProc() {
+	balance -= monthlyServiceCharge;
+	calcInt();
+	numDeposits = 0;
+	numWithdrawals = 0;
+	monthlyServiceCharge = 0.0;
+}
 
+double BankAccount::getBalance() const {
+	return balance;
+}
+
+int BankAccount::getNumWithdrawals() const {
+	return numWithdrawals;
+}
+
+// increments for service charge by 1 dollar
+void BankAccount::serviceCharge(double num) {
+	monthlyServiceCharge += num;
 }

@@ -14,7 +14,7 @@
 
 class SavingAccount : public BankAccount {
 private:
-	bool active;
+	bool status;
 public:
 	bool withdraw();
 	bool deposit();
