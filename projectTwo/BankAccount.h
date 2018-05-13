@@ -28,7 +28,10 @@ public:
 	virtual void calcInt();
 	virtual void monthlyProc();
 
+	void setBalance(double);
 	double getBalance() const;
 	int getNumWithdrawals() const;
+	int getNumDeposits() const;
 	void serviceCharge(double);
+	double getServiceCharge() const;
 };

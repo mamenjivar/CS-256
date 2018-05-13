@@ -68,6 +68,10 @@ void BankAccount::monthlyProc() {
 	monthlyServiceCharge = 0.0;
 }
 
+void BankAccount::setBalance(double amount) {
+	balance = amount;
+}
+
 double BankAccount::getBalance() const {
 	return balance;
 }
@@ -79,4 +83,12 @@ int BankAccount::getNumWithdrawals() const {
 // increments for service charge by 1 dollar
 void BankAccount::serviceCharge(double num) {
 	monthlyServiceCharge += num;
+}
+
+int BankAccount::getNumDeposits() const {
+	return numDeposits;
+}
+
+double BankAccount::getServiceCharge() const {
+	return monthlyServiceCharge;
 }

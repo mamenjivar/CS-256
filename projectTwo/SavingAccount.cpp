@@ -15,23 +15,33 @@
 // if balance of savings account falls below 25, it becomes inactive
 // no more withdrawals may be made until balance is raised above 25
 // then account becomes active again
-bool SavingAccount::withdraw() {
+void SavingAccount::withdraw(double money) {
 	if (getBalance() <= 25) {
 		status = false;
 	}
 	else {
 		status = true;
+		BankAccount::withdraw(money);
 		// call base class version of withdraw
 	}
 
-	return status;
+	//return status;
 }
 
 // checks to see account is inactive before a deposit is made
 // if account is inactive, and deposit brings balance above $25,
 // account becomes active, then calls base class version of function
-bool SavingAccount::deposit() {
-	return true;
+void SavingAccount::deposit(double dep) {
+	//if (status == true) {
+		if ((getBalance() + dep) > 25) {
+			status = true;
+			BankAccount::deposit(dep);
+		}
+	//}
+	else {
+		status = false;
+	}
+	//return true;
 }
 
 // checks number of withdrawals, if number of withdrawals for month is 
@@ -41,8 +51,22 @@ bool SavingAccount::deposit() {
 void SavingAccount::monthlyProc() {
 	if (getNumWithdrawals() > 4) {
 		serviceCharge(1.0);
-		SavingAccount::withdraw();
+		withdraw(0.0);
 		//BankAccount::withdraw();
 
 	}
+}
+
+bool SavingAccount::checkStatus(double amt) {
+	if ((getBalance() - amt) < 25) {
+		status = false;
+	}
+	else {
+		status = true;
+	}
+	return status;
+}
+   
+bool SavingAccount::getStatus() const {
+	return status;
 }

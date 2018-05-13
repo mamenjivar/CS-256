@@ -16,7 +16,10 @@ class SavingAccount : public BankAccount {
 private:
 	bool status;
 public:
-	bool withdraw();
-	bool deposit();
+	void withdraw(double);
+	void deposit(double);
 	void monthlyProc();
-};
+
+	bool checkStatus(double);
+	bool getStatus() const;
+}; 
