@@ -8,6 +8,8 @@ Programming in C
 
 DUE: TUESDAY 4/24
 
+Book: Starting out with C++ From Control Structures through Objects 8th Edition
+
 1.	Theater Seating (Chapter 7 pg454 #20)
 Complete the assignment individually but as always you may brain storm and talk with your peers using the discussion board on blackboard.
 

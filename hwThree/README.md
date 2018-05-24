@@ -4,6 +4,8 @@ Course: CS 256
 
 Assignment: HW #3
 
+Book: Starting out with C++ From Control Structures through Objects 8th Edition
+
 C Programming Assignments
 1)	Chapter 4 Programming Challenge #23  Geometry Calculator Pg 225
 2)	Chapter 6 Programming Challenge #16 Population Pg 371
