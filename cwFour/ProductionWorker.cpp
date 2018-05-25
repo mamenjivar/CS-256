@@ -31,12 +31,27 @@ ProductionWorker::ProductionWorker(int number, double rate) {
 	hourlyPayRate = rate;
 }
 
+// any number other than 1 or 2 is invalid
 void ProductionWorker::setShift(int number) {
-	shift = number;
+	if (number == 1) {
+		shift = number;
+	}
+	else if (number == 2) {
+		shift = number;
+	}
+	else { 
+		throw InvalidWorker();
+	}
 }
 
+// any negative number for pay rate is invalid
 void ProductionWorker::setHourlyPayRate(double hour) {
-	hourlyPayRate = hour;
+	if (hour < 0.0) {
+		throw InvalidWorker();
+	}
+	else {
+		hourlyPayRate = hour;
+	}
 }
 
 int ProductionWorker::getShift() const {

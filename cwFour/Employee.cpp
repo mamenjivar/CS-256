@@ -20,10 +20,10 @@ using namespace std;
 Employee::Employee() {
 	employeeName = "";
 	employeeNumber = 0;
-	hireDate = "";
+	hireDate = 0;
 }
 
-Employee::Employee(string name, int number, string date) {
+Employee::Employee(string name, int number, int date) {
 	employeeName = name;
 	employeeNumber = number;
 	hireDate = date;
@@ -34,10 +34,17 @@ void Employee::setEmployeeName(string name) {
 }
 
 void Employee::setEmployeeNumber(int number) {
-	employeeNumber = number;
+	// throw exceptioin named InvalidEmployeeNumber
+	// < than 0 or > than 9999
+	if ((number < 0) || (number > 9999)) {
+		throw invalidEmployeeNumber();
+	}
+	else {
+		employeeNumber = number;
+	}
 }
 
-void Employee::setHireDate(string date) {
+void Employee::setHireDate(int date) {
 	hireDate = date;
 }
 
@@ -49,6 +56,6 @@ int Employee::getEmployeeNumber() const {
 	return employeeNumber;
 }
 
-string Employee::getHireDate() const {
+int Employee::getHireDate() const {
 	return hireDate;
 }

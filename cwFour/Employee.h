@@ -22,21 +22,25 @@ class Employee {
 private:
 	string employeeName;
 	int employeeNumber;
-	string hireDate;
+	int hireDate;
 
 public:
 	// constructor
 	Employee();
-	Employee(string, int, string);
+	Employee(string, int, int);
 
 	// setters
 	void setEmployeeName(string);
 	void setEmployeeNumber(int);
-	void setHireDate(string);
+	void setHireDate(int);
 
 	// getters
 	string getEmployeeName() const;
 	int getEmployeeNumber() const;
-	string getHireDate() const;
+	int getHireDate() const;
+
+	// exception class for employee number
+	class invalidEmployeeNumber{};
+
 };
 #endif /* EMPLOYEE_H */

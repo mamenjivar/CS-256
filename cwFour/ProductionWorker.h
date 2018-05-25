@@ -38,6 +38,10 @@ public:
 	// getters
 	int getShift() const;
 	double getHourlyPayRate() const;
+
+	// exception for when it receives an invalid shift
+	// exception for when it receives a negative number for hourly pay rate
+	class InvalidWorker{};
 };
 
 #endif /* PRODUCTIONWORKER_H */
