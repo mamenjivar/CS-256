@@ -4,7 +4,7 @@
 * Date: 6/1/2018
 *
 * Assignment: Midterm
-* Parent Header
+* Parent.h
 *
 * Description:
 * Parent of the class

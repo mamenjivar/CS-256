@@ -32,3 +32,36 @@ Human::Human(string n, int a, char s) {
 	age = a;
 	sex = s;
 }
+
+// setters
+void Human::setName(string n) {
+	name = n;
+}
+
+void Human::setAge(int a) {
+	age = a;
+}
+
+void Human::setSex(char c) {
+	sex = c;
+}
+
+
+// getters
+string Human::getName() const {
+	return name;
+}
+
+int Human::getAge() const {
+	return age;
+}
+
+char Human::getSex() const {
+	return sex;
+}
+
+string Human::work()
+{
+
+	return string();
+}

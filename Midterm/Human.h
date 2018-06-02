@@ -30,13 +30,11 @@ public:
 	void setName(string);
 	void setAge(int);
 	void setSex(char);
-	void setJob(string);
 
 	// getters
 	string getName() const;
 	int getAge() const;
 	char getSex() const;
-	string getJob() const;
 
 	virtual string work();
 };
