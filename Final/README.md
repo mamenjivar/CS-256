@@ -1,6 +1,6 @@
 # CS-256
 
-CS Final
+Assignment: Final
 
 Date: 6/5/18
 
